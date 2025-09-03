@@ -1,0 +1,61 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cameraGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5f3c16;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="lensGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a202c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4a5568;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f8f9fa"/>
+  
+  <!-- Camera Body -->
+  <rect x="120" y="120" width="160" height="100" fill="url(#cameraGradient)" rx="10"/>
+  
+  <!-- Camera Top -->
+  <rect x="140" y="100" width="120" height="25" fill="url(#cameraGradient)" rx="5"/>
+  
+  <!-- Viewfinder -->
+  <rect x="180" y="95" width="40" height="15" fill="#2d3748" rx="3"/>
+  
+  <!-- Main Lens -->
+  <circle cx="200" cy="170" r="35" fill="url(#lensGradient)"/>
+  <circle cx="200" cy="170" r="30" fill="#1a202c"/>
+  <circle cx="200" cy="170" r="20" fill="url(#lensGradient)"/>
+  
+  <!-- Lens Reflection -->
+  <circle cx="190" cy="160" r="8" fill="white" opacity="0.4"/>
+  
+  <!-- Flash -->
+  <rect x="240" y="105" width="15" height="10" fill="white" rx="2"/>
+  
+  <!-- Shutter Button -->
+  <circle cx="160" cy="112" r="6" fill="#4a5568"/>
+  <circle cx="160" cy="112" r="4" fill="#718096"/>
+  
+  <!-- Mode Dial -->
+  <circle cx="220" cy="112" r="8" fill="#2d3748"/>
+  <line x1="220" y1="107" x2="220" y2="117" stroke="white" stroke-width="1"/>
+  
+  <!-- Camera Strap Lugs -->
+  <rect x="115" y="140" width="8" height="6" fill="#2d3748" rx="1"/>
+  <rect x="277" y="140" width="8" height="6" fill="#2d3748" rx="1"/>
+  
+  <!-- LCD Screen -->
+  <rect x="240" y="140" width="35" height="25" fill="#1a202c" rx="2"/>
+  <rect x="242" y="142" width="31" height="21" fill="#4fd1c7" opacity="0.3" rx="1"/>
+  
+  <!-- Control Buttons -->
+  <circle cx="250" cy="180" r="4" fill="#4a5568"/>
+  <circle cx="265" cy="180" r="4" fill="#4a5568"/>
+  <circle cx="250" cy="195" r="4" fill="#4a5568"/>
+  <circle cx="265" cy="195" r="4" fill="#4a5568"/>
+  
+  <!-- Brand Text -->
+  <text x="200" y="250" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#2d3748">DIGITAL</text>
+  <text x="200" y="270" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#718096">Cámara</text>
+</svg>

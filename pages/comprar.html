@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Compra - Premium Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/comprar.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <a href="index.html" class="text-2xl font-bold gradient-text">PREMIUM STORE</a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link">Inicio</a>
+                    <a href="listado_box.html" class="nav-link">Productos</a>
+                    <a href="listado_tabla.html" class="nav-link">Catálogo</a>
+                    <a href="producto.html" class="nav-link">Producto</a>
+                    <a href="comprar.html" class="nav-link text-purple-600 font-semibold">Comprar</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <i class="fas fa-shopping-cart text-xl text-gray-600 hover:text-purple-600 transition-colors cursor-pointer"></i>
+                        <span class="cart-badge">3</span>
+                    </div>
+                    <a href="login.html" class="text-gray-600 hover:text-purple-600 transition-colors">
+                        <i class="fas fa-user text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-100 py-4">
+        <div class="container mx-auto px-6">
+            <nav class="text-sm">
+                <ol class="list-none p-0 inline-flex">
+                    <li class="flex items-center">
+                        <a href="index.html" class="text-purple-600 hover:text-purple-800">Inicio</a>
+                        <i class="fas fa-chevron-right mx-2 text-gray-400"></i>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="listado_box.html" class="text-purple-600 hover:text-purple-800">Productos</a>
+                        <i class="fas fa-chevron-right mx-2 text-gray-400"></i>
+                    </li>
+                    <li class="text-gray-500">Finalizar Compra</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-bold gradient-text mb-4">Finalizar Compra</h1>
+                <p class="text-gray-600 text-lg">Complete sus datos para procesar su pedido</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Formulario de Compra -->
+                <div class="lg:col-span-2">
+                    <div class="bg-white rounded-2xl shadow-xl p-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6">
+                            <i class="fas fa-user-circle mr-3 text-purple-600"></i>
+                            Información del Cliente
+                        </h2>
+                        
+                        <form class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Nombre Completo</label>
+                                    <input type="text" class="form-input" placeholder="Ingrese su nombre completo" required>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Teléfono</label>
+                                    <input type="tel" class="form-input" placeholder="Ingrese su teléfono" required>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                                <input type="email" class="form-input" placeholder="Ingrese su email" required>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Dirección Completa</label>
+                                <textarea class="form-input" rows="3" placeholder="Ingrese su dirección completa" required></textarea>
+                            </div>
+
+                            <!-- Método de Pago -->
+                            <div class="border-t pt-6">
+                                <h3 class="text-xl font-bold text-gray-800 mb-4">
+                                    <i class="fas fa-credit-card mr-3 text-purple-600"></i>
+                                    Método de Pago
+                                </h3>
+                                
+                                <div class="space-y-4">
+                                    <div class="payment-option">
+                                        <input type="radio" id="tarjeta" name="pago" value="tarjeta" class="mr-3" checked>
+                                        <label for="tarjeta" class="flex items-center cursor-pointer">
+                                            <i class="fas fa-credit-card mr-3 text-blue-600"></i>
+                                            <span class="font-medium">Tarjeta de Crédito/Débito</span>
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="payment-option">
+                                        <input type="radio" id="efectivo" name="pago" value="efectivo" class="mr-3">
+                                        <label for="efectivo" class="flex items-center cursor-pointer">
+                                            <i class="fas fa-money-bill-wave mr-3 text-green-600"></i>
+                                            <span class="font-medium">Pago en Efectivo</span>
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="payment-option">
+                                        <input type="radio" id="transferencia" name="pago" value="transferencia" class="mr-3">
+                                        <label for="transferencia" class="flex items-center cursor-pointer">
+                                            <i class="fas fa-university mr-3 text-purple-600"></i>
+                                            <span class="font-medium">Transferencia Bancaria</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Resumen del Pedido -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white rounded-2xl shadow-xl p-6 sticky top-24">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6">
+                            <i class="fas fa-shopping-bag mr-3 text-purple-600"></i>
+                            Resumen del Pedido
+                        </h3>
+                        
+                        <div class="space-y-4 mb-6">
+                            <div class="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
+                                <img src="../assets/img/auriculares.svg" alt="Auriculares Premium" class="w-16 h-16 object-cover rounded-lg">
+                                <div class="flex-1">
+                                    <h4 class="font-medium text-gray-800">Auriculares Premium</h4>
+                                    <p class="text-sm text-gray-600">Cantidad: 1</p>
+                                </div>
+                                <span class="font-bold text-purple-600">$299.99</span>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
+                                <img src="../assets/img/reloj.svg" alt="Reloj Inteligente" class="w-16 h-16 object-cover rounded-lg">
+                                <div class="flex-1">
+                                    <h4 class="font-medium text-gray-800">Reloj Inteligente</h4>
+                                    <p class="text-sm text-gray-600">Cantidad: 1</p>
+                                </div>
+                                <span class="font-bold text-purple-600">$199.99</span>
+                            </div>
+                        </div>
+                        
+                        <div class="border-t pt-4 space-y-2">
+                            <div class="flex justify-between text-gray-600">
+                                <span>Subtotal:</span>
+                                <span>$499.98</span>
+                            </div>
+                            <div class="flex justify-between text-gray-600">
+                                <span>Envío:</span>
+                                <span>$19.99</span>
+                            </div>
+                            <div class="flex justify-between text-gray-600">
+                                <span>Impuestos:</span>
+                                <span>$52.00</span>
+                            </div>
+                            <div class="border-t pt-2 flex justify-between text-xl font-bold text-gray-800">
+                                <span>Total:</span>
+                                <span class="text-purple-600">$571.97</span>
+                            </div>
+                        </div>
+                        
+                        <button class="btn-primary w-full mt-6 text-lg py-4">
+                            <i class="fas fa-lock mr-2"></i>
+                            Finalizar Compra
+                        </button>
+                        
+                        <div class="mt-4 text-center">
+                            <p class="text-sm text-gray-500">
+                                <i class="fas fa-shield-alt mr-1"></i>
+                                Compra 100% segura
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 gradient-text">PREMIUM STORE</h3>
+                    <p class="text-gray-400">Tu tienda de confianza para productos premium de alta calidad.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="listado_box.html" class="hover:text-white transition-colors">Productos</a></li>
+                        <li><a href="listado_tabla.html" class="hover:text-white transition-colors">Catálogo</a></li>
+                        <li><a href="comprar.html" class="hover:text-white transition-colors">Comprar</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Atención al Cliente</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>📞 +1 (555) 123-4567</li>
+                        <li>📧 info@premiumstore.com</li>
+                        <li>🕒 Lun-Vie 9:00-18:00</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Síguenos</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Premium Store. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

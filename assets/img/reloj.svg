@@ -1,0 +1,40 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="watchGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5f3c16;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="screenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a202c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d3748;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f8f9fa"/>
+  
+  <!-- Watch Band -->
+  <rect x="180" y="50" width="40" height="200" fill="url(#watchGradient)" rx="20"/>
+  
+  <!-- Watch Case -->
+  <rect x="160" y="100" width="80" height="100" fill="url(#watchGradient)" rx="15"/>
+  
+  <!-- Watch Screen -->
+  <rect x="170" y="110" width="60" height="80" fill="url(#screenGradient)" rx="8"/>
+  
+  <!-- Digital Display -->
+  <text x="200" y="135" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle" fill="#00ff88">12:34</text>
+  <text x="200" y="155" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#4fd1c7">Lun 15 Ene</text>
+  
+  <!-- Heart Rate Icon -->
+  <path d="M 185 165 Q 185 160 190 160 Q 195 160 195 165 Q 195 160 200 160 Q 205 160 205 165 Q 205 170 200 175 L 195 180 L 190 175 Q 185 170 185 165 Z" fill="#ff6b6b"/>
+  <text x="210" y="175" font-family="Arial, sans-serif" font-size="8" fill="#a0aec0">72 BPM</text>
+  
+  <!-- Side Button -->
+  <rect x="240" y="130" width="8" height="15" fill="#4a5568" rx="2"/>
+  <rect x="240" y="155" width="8" height="15" fill="#4a5568" rx="2"/>
+  
+  <!-- Brand Text -->
+  <text x="200" y="230" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#2d3748">SMART</text>
+  <text x="200" y="250" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#718096">Watch</text>
+</svg>

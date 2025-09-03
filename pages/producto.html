@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj Premium Elegance - Premium Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/producto.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="w-12 h-12 mr-3">
+                        <img src="../assets/img/camara.svg" alt="Logo Premium Store" class="w-full h-full object-contain">
+                    </div>
+                    <a href="index.html" class="text-2xl font-bold gradient-text">PREMIUM STORE</a>
+                </div>
+                <!-- Navegación -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Inicio</a>
+                    <a href="listado_box.html" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Productos</a>
+                    <a href="listado_tabla.html" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Catálogo</a>
+                    <a href="producto.html" class="nav-link text-purple-600 font-medium">Producto</a>
+                    <a href="comprar.html" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Comprar</a>
+                </nav>
+                <!-- Iconos de acción -->
+                <div class="flex items-center space-x-6">
+                    <div class="relative">
+                        <button class="text-gray-600 hover:text-purple-600 transition-colors">
+                            <i class="fas fa-search text-xl"></i>
+                        </button>
+                    </div>
+                    <div class="relative">
+                        <a href="login.html" class="text-gray-600 hover:text-purple-600 transition-colors">
+                            <i class="fas fa-user text-xl"></i>
+                        </a>
+                    </div>
+                    <div class="relative">
+                        <button class="text-gray-600 hover:text-purple-600 transition-colors">
+                            <i class="fas fa-shopping-cart text-xl"></i>
+                            <span class="cart-badge">3</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white border-b">
+        <div class="container mx-auto px-4 py-3">
+            <nav class="text-sm">
+                <a href="index.html" class="text-purple-600 hover:text-purple-800">Inicio</a>
+                <span class="mx-2 text-gray-400">/</span>
+                <a href="listado_box.html" class="text-purple-600 hover:text-purple-800">Productos</a>
+                <span class="mx-2 text-gray-400">/</span>
+                <span class="text-gray-600">Reloj Premium Elegance</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Producto Detail -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <!-- Imagen del producto -->
+                <div class="product-image-container">
+                    <img src="../assets/img/reloj.svg" alt="Reloj Premium Elegance" class="w-full rounded-2xl shadow-lg">
+                </div>
+                
+                <!-- Información del producto -->
+                <div class="product-info">
+                    <div class="mb-4">
+                        <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-medium">Moda</span>
+                    </div>
+                    
+                    <h1 class="text-3xl font-bold text-gray-800 mb-4">Reloj Premium Elegance</h1>
+                    
+                    <div class="flex items-center mb-6">
+                        <div class="flex text-yellow-400 mr-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-gray-600">(128 reseñas)</span>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex items-center gap-4">
+                            <span class="text-3xl font-bold text-gray-800">€189</span>
+                            <span class="text-xl text-gray-500 line-through">€239</span>
+                            <span class="bg-red-500 text-white px-2 py-1 rounded text-sm font-medium">-20%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h3 class="font-semibold text-gray-800 mb-3">Descripción</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Reloj elegante y minimalista con correa de cuero auténtico y caja en oro rosa. 
+                            Diseño atemporal que combina perfectamente con cualquier estilo. Resistente al agua 
+                            y con movimiento de cuarzo de alta precisión.
+                        </p>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h3 class="font-semibold text-gray-800 mb-3">Características</h3>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Correa de cuero genuino</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Caja de oro rosa</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Resistente al agua</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Movimiento de cuarzo</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="flex gap-4">
+                        <a href="comprar.html" class="btn-primary px-8 py-3 rounded-lg text-white font-semibold flex-1 text-center">
+                            <i class="fas fa-shopping-cart mr-2"></i>Comprar Ahora
+                        </a>
+                        <button class="bg-gray-100 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos Relacionados -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">Productos Relacionados</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Producto relacionado 1 -->
+                <div class="card-hover bg-gray-50 rounded-2xl overflow-hidden">
+                    <img src="../assets/img/auriculares.svg" alt="Auriculares Elite Sound" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-800 mb-2">Auriculares Elite Sound</h3>
+                        <p class="text-2xl font-bold text-gray-800">€299</p>
+                    </div>
+                </div>
+                <!-- Producto relacionado 2 -->
+                <div class="card-hover bg-gray-50 rounded-2xl overflow-hidden">
+                    <img src="../assets/img/mochila.svg" alt="Billetera Classic Leather" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-800 mb-2">Billetera Classic Leather</h3>
+                        <p class="text-2xl font-bold text-gray-800">€79</p>
+                    </div>
+                </div>
+                <!-- Producto relacionado 3 -->
+                <div class="card-hover bg-gray-50 rounded-2xl overflow-hidden">
+                    <img src="../assets/img/gafas.svg" alt="Taza Premium Ceramic" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-800 mb-2">Taza Premium Ceramic</h3>
+                        <p class="text-2xl font-bold text-gray-800">€35</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 mr-3">
+                            <img src="../assets/img/camara.svg" alt="Logo Premium Store" class="w-full h-full object-contain">
+                        </div>
+                        <span class="text-xl font-bold">PREMIUM STORE</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Tu destino para productos de calidad premium y servicio excepcional.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Navegación</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="listado_box.html" class="text-gray-400 hover:text-white transition-colors">Productos</a></li>
+                        <li><a href="listado_tabla.html" class="text-gray-400 hover:text-white transition-colors">Catálogo</a></li>
+                        <li><a href="comprar.html" class="text-gray-400 hover:text-white transition-colors">Comprar</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Ayuda</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Centro de Ayuda</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Envíos y Entregas</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Devoluciones</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Contacto</h3>
+                    <div class="space-y-2 text-gray-400">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i> Av. Principal 123, Madrid</p>
+                        <p><i class="fas fa-phone mr-2"></i> +34 912 345 678</p>
+                        <p><i class="fas fa-envelope mr-2"></i> info@premiumstore.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2024 Premium Store. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Funcionalidad del carrito
+            const addToCartBtn = document.querySelector('.btn-primary');
+            const cartBadge = document.querySelector('.cart-badge');
+            
+            if (addToCartBtn && cartBadge) {
+                addToCartBtn.addEventListener('click', function(e) {
+                    if (this.getAttribute('href') === 'comprar.html') {
+                        e.preventDefault();
+                        let count = parseInt(cartBadge.textContent);
+                        cartBadge.textContent = count + 1;
+                        
+                        // Efecto visual
+                        this.style.background = '#10b981';
+                        this.innerHTML = '<i class="fas fa-check mr-2"></i>Agregado al Carrito';
+                        
+                        setTimeout(() => {
+                            this.style.background = '';
+                            this.innerHTML = '<i class="fas fa-shopping-cart mr-2"></i>Comprar Ahora';
+                        }, 2000);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

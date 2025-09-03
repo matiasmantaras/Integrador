@@ -1,0 +1,48 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="backpackGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5f3c16;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="pocketGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a5568;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d3748;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f8f9fa"/>
+  
+  <!-- Main Backpack Body -->
+  <rect x="150" y="80" width="100" height="140" fill="url(#backpackGradient)" rx="15"/>
+  
+  <!-- Front Pocket -->
+  <rect x="160" y="100" width="80" height="60" fill="url(#pocketGradient)" rx="10"/>
+  
+  <!-- Zipper -->
+  <line x1="170" y1="110" x2="230" y2="110" stroke="#718096" stroke-width="2"/>
+  <circle cx="235" cy="110" r="3" fill="#718096"/>
+  
+  <!-- Side Pockets -->
+  <ellipse cx="135" cy="140" rx="15" ry="30" fill="url(#pocketGradient)"/>
+  <ellipse cx="265" cy="140" rx="15" ry="30" fill="url(#pocketGradient)"/>
+  
+  <!-- Shoulder Straps -->
+  <path d="M 160 90 Q 140 70 130 50 Q 125 45 130 40 Q 135 45 140 50 Q 150 70 170 90" fill="url(#backpackGradient)"/>
+  <path d="M 240 90 Q 260 70 270 50 Q 275 45 270 40 Q 265 45 260 50 Q 250 70 230 90" fill="url(#backpackGradient)"/>
+  
+  <!-- Top Handle -->
+  <rect x="185" y="70" width="30" height="8" fill="url(#pocketGradient)" rx="4"/>
+  <rect x="190" y="65" width="20" height="5" fill="url(#pocketGradient)" rx="2"/>
+  
+  <!-- Bottom Reinforcement -->
+  <rect x="150" y="210" width="100" height="10" fill="url(#pocketGradient)" rx="5"/>
+  
+  <!-- Logo/Brand Area -->
+  <rect x="180" y="180" width="40" height="20" fill="white" opacity="0.8" rx="3"/>
+  <text x="200" y="193" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#2d3748">PREMIUM</text>
+  
+  <!-- Brand Text -->
+  <text x="200" y="250" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#2d3748">EXECUTIVE</text>
+  <text x="200" y="270" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#718096">Mochila</text>
+</svg>

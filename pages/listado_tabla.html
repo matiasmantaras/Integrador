@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Premium Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/listado.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <a href="index.html" class="text-2xl font-bold gradient-text">PREMIUM STORE</a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link">Inicio</a>
+                    <a href="listado_box.html" class="nav-link">Productos</a>
+                    <a href="listado_tabla.html" class="nav-link text-purple-600 font-semibold">Catálogo</a>
+                    <a href="producto.html" class="nav-link">Producto</a>
+                    <a href="comprar.html" class="nav-link">Comprar</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <i class="fas fa-shopping-cart text-xl text-gray-600 hover:text-purple-600 transition-colors cursor-pointer"></i>
+                        <span class="cart-badge">3</span>
+                    </div>
+                    <a href="login.html" class="text-gray-600 hover:text-purple-600 transition-colors">
+                        <i class="fas fa-user text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-100 py-4">
+        <div class="container mx-auto px-6">
+            <nav class="text-sm">
+                <ol class="list-none p-0 inline-flex">
+                    <li class="flex items-center">
+                        <a href="index.html" class="text-purple-600 hover:text-purple-800">Inicio</a>
+                        <i class="fas fa-chevron-right mx-2 text-gray-400"></i>
+                    </li>
+                    <li class="text-gray-500">Catálogo</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        <!-- Header Section -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold gradient-text mb-4">Catálogo de Productos</h1>
+            <p class="text-gray-600 text-lg max-w-2xl mx-auto">Vista detallada de nuestro inventario con información completa de stock y precios</p>
+        </div>
+
+        <!-- Filters and Search -->
+        <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
+            <div class="flex flex-col md:flex-row gap-4 items-center justify-between">
+                <div class="flex flex-col md:flex-row gap-4 flex-1">
+                    <div class="relative">
+                        <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                        <input type="text" placeholder="Buscar productos..." class="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent w-full md:w-64">
+                    </div>
+                    <select class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                        <option value="">Todas las categorías</option>
+                        <option value="electronica">Electrónica</option>
+                        <option value="ropa">Ropa</option>
+                        <option value="hogar">Hogar</option>
+                        <option value="deportes">Deportes</option>
+                    </select>
+                    <select class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                        <option value="">Ordenar por</option>
+                        <option value="nombre">Nombre A-Z</option>
+                        <option value="precio-asc">Precio: Menor a Mayor</option>
+                        <option value="precio-desc">Precio: Mayor a Menor</option>
+                        <option value="stock">Stock Disponible</option>
+                    </select>
+                </div>
+                <div class="flex gap-2">
+                    <a href="listado_box.html" class="view-toggle">
+                        <i class="fas fa-th-large"></i>
+                    </a>
+                    <button class="view-toggle active" data-view="table">
+                        <i class="fas fa-list"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Products Table -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead class="bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+                        <tr>
+                            <th class="px-6 py-4 text-left text-sm font-semibold uppercase tracking-wider">
+                                <i class="fas fa-image mr-2"></i>Producto
+                            </th>
+                            <th class="px-6 py-4 text-left text-sm font-semibold uppercase tracking-wider">
+                                <i class="fas fa-tag mr-2"></i>Categoría
+                            </th>
+                            <th class="px-6 py-4 text-left text-sm font-semibold uppercase tracking-wider">
+                                <i class="fas fa-dollar-sign mr-2"></i>Precio
+                            </th>
+                            <th class="px-6 py-4 text-left text-sm font-semibold uppercase tracking-wider">
+                                <i class="fas fa-boxes mr-2"></i>Stock
+                            </th>
+                            <th class="px-6 py-4 text-left text-sm font-semibold uppercase tracking-wider">
+                                <i class="fas fa-star mr-2"></i>Rating
+                            </th>
+                            <th class="px-6 py-4 text-center text-sm font-semibold uppercase tracking-wider">
+                                <i class="fas fa-cogs mr-2"></i>Acciones
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr class="table-row hover:bg-gray-50 transition-colors">
+                            <td class="px-6 py-4">
+                                <div class="flex items-center space-x-4">
+                                    <img src="../assets/img/auriculares.svg" alt="Auriculares Premium" class="w-16 h-16 object-cover rounded-lg">
+                                    <div>
+                                        <h3 class="font-semibold text-gray-900">Auriculares Premium</h3>
+                                        <p class="text-sm text-gray-500">Sonido de alta calidad</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                                    <i class="fas fa-laptop mr-1"></i>Electrónica
+                                </span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex flex-col">
+                                    <span class="text-lg font-bold text-purple-600">$299.99</span>
+                                    <span class="text-sm text-gray-500 line-through">$399.99</span>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
+                                    <i class="fas fa-check-circle mr-1"></i>25 unidades
+                                </span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex items-center space-x-2">
+                                    <div class="flex text-yellow-400">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="text-sm text-gray-600">(4.8)</span>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <div class="flex justify-center space-x-2">
+                                    <a href="producto.html" class="action-btn view">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <button class="action-btn cart">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                    <button class="action-btn favorite">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr class="table-row hover:bg-gray-50 transition-colors">
+                            <td class="px-6 py-4">
+                                <div class="flex items-center space-x-4">
+                                    <img src="../assets/img/reloj.svg" alt="Reloj Inteligente" class="w-16 h-16 object-cover rounded-lg">
+                                    <div>
+                                        <h3 class="font-semibold text-gray-900">Reloj Inteligente</h3>
+                                        <p class="text-sm text-gray-500">Tecnología avanzada</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                                    <i class="fas fa-laptop mr-1"></i>Electrónica
+                                </span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex flex-col">
+                                    <span class="text-lg font-bold text-purple-600">$199.99</span>
+                                    <span class="text-sm text-gray-500 line-through">$269.99</span>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-yellow-100 text-yellow-800">
+                                    <i class="fas fa-exclamation-triangle mr-1"></i>8 unidades
+                                </span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex items-center space-x-2">
+                                    <div class="flex text-yellow-400">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="text-sm text-gray-600">(4.2)</span>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <div class="flex justify-center space-x-2">
+                                    <a href="producto.html" class="action-btn view">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <button class="action-btn cart">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                    <button class="action-btn favorite">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr class="table-row hover:bg-gray-50 transition-colors">
+                            <td class="px-6 py-4">
+                                <div class="flex items-center space-x-4">
+                                    <img src="../assets/img/zapatillas.svg" alt="Zapatillas Deportivas" class="w-16 h-16 object-cover rounded-lg">
+                                    <div>
+                                        <h3 class="font-semibold text-gray-900">Zapatillas Deportivas</h3>
+                                        <p class="text-sm text-gray-500">Comodidad y estilo</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                    <i class="fas fa-running mr-1"></i>Deportes
+                                </span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex flex-col">
+                                    <span class="text-lg font-bold text-purple-600">$149.99</span>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
+                                    <i class="fas fa-check-circle mr-1"></i>42 unidades
+                                </span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex items-center space-x-2">
+                                    <div class="flex text-yellow-400">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="text-sm text-gray-600">(4.9)</span>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <div class="flex justify-center space-x-2">
+                                    <a href="producto.html" class="action-btn view">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <button class="action-btn cart">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                    <button class="action-btn favorite">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr class="table-row hover:bg-gray-50 transition-colors">
+                            <td class="px-6 py-4">
+                                <div class="flex items-center space-x-4">
+                                    <img src="../assets/img/gafas.svg" alt="Gafas de Sol" class="w-16 h-16 object-cover rounded-lg">
+                                    <div>
+                                        <h3 class="font-semibold text-gray-900">Gafas de Sol Premium</h3>
+                                        <p class="text-sm text-gray-500">Protección UV total</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
+                                    <i class="fas fa-glasses mr-1"></i>Accesorios
+                                </span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex flex-col">
+                                    <span class="text-lg font-bold text-purple-600">$89.99</span>
+                                    <span class="text-sm text-gray-500 line-through">$119.99</span>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
+                                    <i class="fas fa-check-circle mr-1"></i>15 unidades
+                                </span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex items-center space-x-2">
+                                    <div class="flex text-yellow-400">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="text-sm text-gray-600">(4.3)</span>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <div class="flex justify-center space-x-2">
+                                    <a href="producto.html" class="action-btn view">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <button class="action-btn cart">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                    <button class="action-btn favorite">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr class="table-row hover:bg-gray-50 transition-colors">
+                            <td class="px-6 py-4">
+                                <div class="flex items-center space-x-4">
+                                    <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=80&h=80&fit=crop" alt="Mochila" class="w-16 h-16 object-cover rounded-lg">
+                                    <div>
+                                        <h3 class="font-semibold text-gray-900">Mochila Ejecutiva</h3>
+                                        <p class="text-sm text-gray-500">Diseño profesional</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
+                                    <i class="fas fa-briefcase mr-1"></i>Accesorios
+                                </span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex flex-col">
+                                    <span class="text-lg font-bold text-purple-600">$79.99</span>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-red-100 text-red-800">
+                                    <i class="fas fa-times-circle mr-1"></i>Agotado
+                                </span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex items-center space-x-2">
+                                    <div class="flex text-yellow-400">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="text-sm text-gray-600">(4.7)</span>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <div class="flex justify-center space-x-2">
+                                    <a href="producto.html" class="action-btn view">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <button class="action-btn cart" disabled>
+                                        <i class="fas fa-ban"></i>
+                                    </button>
+                                    <button class="action-btn favorite">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="flex justify-center mt-8">
+            <nav class="flex space-x-2">
+                <button class="pagination-btn" disabled>
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="pagination-btn active">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">3</button>
+                <button class="pagination-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </nav>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 mt-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 gradient-text">PREMIUM STORE</h3>
+                    <p class="text-gray-400">Tu tienda de confianza para productos premium de alta calidad.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="listado_box.html" class="hover:text-white transition-colors">Productos</a></li>
+                        <li><a href="listado_tabla.html" class="hover:text-white transition-colors">Catálogo</a></li>
+                        <li><a href="comprar.html" class="hover:text-white transition-colors">Comprar</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Atención al Cliente</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>📞 +1 (555) 123-4567</li>
+                        <li>📧 info@premiumstore.com</li>
+                        <li>🕒 Lun-Vie 9:00-18:00</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Síguenos</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Premium Store. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

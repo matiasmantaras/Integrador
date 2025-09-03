@@ -1,0 +1,66 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #5f3c16;
+    color: #2d3748;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+        .login-container {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .gradient-text {
+            background: #000000;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .input-field {
+            transition: all 0.3s ease;
+            border: 2px solid #e2e8f0;
+        }
+        .input-field:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        .btn-login {
+            background: #fff;
+            color: #222;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        .btn-login:hover {
+            background: #eaeaea;
+            color: #222;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(58, 90, 64, 0.15);
+        }
+        .separator {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #718096;
+        }
+        .separator::before
+            { content: '';
+            flex: 1;
+          
+            background-color: #222;}
+        .separator::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #566c8a;
+            background-color: #222;
+        }
+        .separator:not(:empty)::before {
+            margin-right: 1em;
+        }
+        .separator:not(:empty)::after {
+            margin-left: 1em;
+        }
+    
